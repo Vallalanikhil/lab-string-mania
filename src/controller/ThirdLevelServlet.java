@@ -15,7 +15,7 @@ import utility.StringAdvanceMethod;
 @WebServlet(urlPatterns = { "/thirdlevel" })
 public class ThirdLevelServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	StringAdvanceMethod stringadvance = new StringAdvanceMethod();
+	StringAdvanceMethod stringAdvance = new StringAdvanceMethod();
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -29,12 +29,12 @@ public class ThirdLevelServlet extends HttpServlet {
 		String seeAnswer = request.getParameter("seeanswer");
 		String end = request.getParameter("end");
 
-		stringadvance.setInput1(input1);
-		stringadvance.setInput2(input2);
+		stringAdvance.setInput1(input1);
+		stringAdvance.setInput1(input2);
 
 		if (seeAnswer != null) {
 			if (concatenation != null) {
-				String output = stringadvance.concat(input1, input2);
+				String output = stringAdvance.concat(input1, input2);
 				// System.out.println(output);
 				request.setAttribute("output", output);
 				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/WEB-INF/views/level3.jsp");
@@ -44,7 +44,7 @@ public class ThirdLevelServlet extends HttpServlet {
 
 		if (seeAnswer != null) {
 			if (split != null) {
-				String output = stringadvance.split(input1, input2);
+				String output = stringAdvance.split(input1, input2);
 				request.setAttribute("output", output);
 				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/WEB-INF/views/level3.jsp");
 				rd.forward(request, response);
@@ -53,7 +53,7 @@ public class ThirdLevelServlet extends HttpServlet {
 
 		if (seeAnswer != null) {
 			if (indexOf != null) {
-				String output = stringadvance.indexOf(input1, input2);
+				String output = stringAdvance.indexOf(input1, input2);
 				request.setAttribute("output", output);
 				RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/WEB-INF/views/level3.jsp");
 				rd.forward(request, response);

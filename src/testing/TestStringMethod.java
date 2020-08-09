@@ -12,7 +12,7 @@ public class TestStringMethod {
 	@Test
 	public void testSetInputsMethod() {
 		sm.setInput("Java");
-		assertEquals("Java", sm.getInput());
+		assertEquals("Java", sm.getInput("Java"));
 		try {
 			sm.setInput(null);
 		} catch (Exception e) {

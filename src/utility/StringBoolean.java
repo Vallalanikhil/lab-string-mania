@@ -19,7 +19,11 @@ public class StringBoolean {
 	public void setInput2(String input2) {
 		this.input2 = input2;
 	}
-
+	
+ public static void concate( String input1, String input2) {
+	 input1=input1 +"Kanna";
+	 input1.concat("heyyou");
+ }
 	public boolean contains(String input1, String input2) {
 		boolean output = input1.contains(input2);
 		System.out.println(output);
